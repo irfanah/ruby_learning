@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class Object - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "./";
+</script>
+
+<script src="./js/jquery.js"></script>
+<script src="./js/darkfish.js"></script>
+
+<link href="./css/fonts.css" rel="stylesheet">
+<link href="./css/rdoc.css" rel="stylesheet">
+
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="./index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="./table_of_contents.html#pages">Pages</a>
+    <a href="./table_of_contents.html#classes">Classes</a>
+    <a href="./table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    <div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  
+  <p class="link">BasicObject
+  
+</div>
+
+    
+    
+    <!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    
+    <li ><a href="#method-i-divide">#divide</a>
+    
+    <li ><a href="#method-i-inverse">#inverse</a>
+    
+    <li ><a href="#method-i-raise_and_rescue">#raise_and_rescue</a>
+    
+    <li ><a href="#method-i-rescue_and_retry">#rescue_and_retry</a>
+    
+    <li ><a href="#method-i-sum">#sum</a>
+    
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-Object">
+  <h1 id="class-Object" class="class">
+    class Object
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+    
+      <div id="method-i-divide" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">divide</span><span
+            class="method-args">(numerator ,denominator)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Example This code uses the application’s logger to print a debugging
+message, and (at a higher severity) as part of error-handling code:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="divide-source">
+            <pre><span class="ruby-comment"># File logging.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">divide</span> (<span class="ruby-identifier">numerator</span> ,<span class="ruby-identifier">denominator</span>)
+  <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">debug</span>(<span class="ruby-node">&quot;Numerator :#{numerator},denominator#{denominator}&quot;</span>)
+  <span class="ruby-keyword">begin</span>
+       <span class="ruby-identifier">result</span> = <span class="ruby-identifier">numerator</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">denominator</span>
+  <span class="ruby-keyword">rescue</span> <span class="ruby-constant">Exception</span> =<span class="ruby-operator">&gt;</span> <span class="ruby-identifier">e</span>
+       <span class="ruby-identifier">$LOG</span>.<span class="ruby-identifier">error</span> <span class="ruby-node">&quot;Error in division: #{e}&quot;</span>
+       <span class="ruby-identifier">result</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">result</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-inverse" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">inverse</span><span
+            class="method-args">(x)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+          
+
+          
+          <div class="method-source-code" id="inverse-source">
+            <pre><span class="ruby-comment"># File raise_exception.rb, line 28</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">inverse</span>(<span class="ruby-identifier">x</span>)
+  <span class="ruby-identifier">raise</span> <span class="ruby-constant">NotInveribleError</span>, <span class="ruby-string">&quot;Argument is not numeric&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">x</span>.<span class="ruby-identifier">is_a?</span> <span class="ruby-constant">Numeric</span>
+  <span class="ruby-value">1.0</span> <span class="ruby-operator">/</span> <span class="ruby-identifier">x</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-raise_and_rescue" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">raise_and_rescue</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Example</p>
+          
+          
+
+          
+          <div class="method-source-code" id="raise_and_rescue-source">
+            <pre><span class="ruby-comment"># File handle_exception.rb, line 12</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">raise_and_rescue</span>
+  
+  <span class="ruby-keyword">begin</span>
+    <span class="ruby-identifier">puts</span>  <span class="ruby-string">&#39;I am before the raise&#39;</span>
+    <span class="ruby-identifier">raise</span> <span class="ruby-string">&#39;An Error occurred&#39;</span>
+    <span class="ruby-identifier">puts</span>  <span class="ruby-string">&#39;After the raise&#39;</span>
+  <span class="ruby-keyword">rescue</span>
+    <span class="ruby-identifier">puts</span>  <span class="ruby-string">&#39;I am rescued!&#39;</span>
+  <span class="ruby-keyword">end</span>
+    
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-rescue_and_retry" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">rescue_and_retry</span><span
+            class="method-args">()</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Here’s a demonstration of the retry statement. The first time the code
+block runs, it raises an exception. The exception is rescued, the problem
+is “fixed,” and the code runs to completion the second time:</p>
+          
+          
+
+          
+          <div class="method-source-code" id="rescue_and_retry-source">
+            <pre><span class="ruby-comment"># File retry_after_exception.rb, line 14</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">rescue_and_retry</span>
+
+  <span class="ruby-identifier">error_fixed</span> = <span class="ruby-keyword">false</span>
+  <span class="ruby-keyword">begin</span>
+        <span class="ruby-identifier">puts</span>   <span class="ruby-string">&quot;I am before the raise in the begin block &quot;</span>
+        <span class="ruby-identifier">raise</span>  <span class="ruby-string">&quot;Oops an error occured !&quot;</span> <span class="ruby-keyword">unless</span> <span class="ruby-identifier">error_fixed</span>
+        <span class="ruby-identifier">puts</span>   <span class="ruby-string">&quot;I am after the raise in the begin block &quot;</span>
+  <span class="ruby-keyword">rescue</span>
+        <span class="ruby-identifier">puts</span>   <span class="ruby-string">&quot;An Exception was thrown \n\n Retrying Now...&quot;</span>
+        <span class="ruby-identifier">error_fixed</span> = <span class="ruby-keyword">true</span>
+        <span class="ruby-keyword">retry</span>
+  <span class="ruby-keyword">end</span>
+        <span class="ruby-identifier">puts</span> <span class="ruby-string">&quot;I am after the end block of resuce &quot;</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+      <div id="method-i-sum" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">sum</span><span
+            class="method-args">(*terms)</span>
+          
+          <span class="method-click-advice">click to toggle source</span>
+          
+        </div>
+        
+
+        <div class="method-description">
+          
+          <p>Takes any number of numeric terms and returns the sum.</p>
+
+<pre class="ruby"><span class="ruby-identifier">sum</span>(<span class="ruby-value">1</span>, <span class="ruby-value">2</span>, <span class="ruby-value">3</span>)                             <span class="ruby-comment"># =&gt; 6</span>
+<span class="ruby-identifier">sum</span>(<span class="ruby-value">1</span>, <span class="ruby-value">-1</span>, <span class="ruby-value">10</span>)                           <span class="ruby-comment"># =&gt; 10</span>
+<span class="ruby-identifier">sum</span>(<span class="ruby-value">1.5</span>, <span class="ruby-value">0.2</span>, <span class="ruby-value">0.3</span>, <span class="ruby-value">1</span>)                    <span class="ruby-comment"># =&gt; 3.0</span>
+</pre>
+          
+          
+
+          
+          <div class="method-source-code" id="sum-source">
+            <pre><span class="ruby-comment"># File documenting.rb, line 16</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">sum</span>(<span class="ruby-operator">*</span><span class="ruby-identifier">terms</span>)
+  <span class="ruby-identifier">terms</span>.<span class="ruby-identifier">inject</span>(<span class="ruby-value">0</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">sum</span>, <span class="ruby-identifier">term</span><span class="ruby-operator">|</span> <span class="ruby-identifier">sum</span> <span class="ruby-operator">+</span> <span class="ruby-identifier">term</span>}
+<span class="ruby-keyword">end</span></pre>
+          </div>
+          
+        </div>
+
+        
+
+        
+      </div>
+
+    
+    </section>
+  
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="http://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="http://docs.seattlerb.org/rdoc/">RDoc</a> 4.2.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
