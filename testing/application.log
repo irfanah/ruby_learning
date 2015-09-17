@@ -1,0 +1,4 @@
+# Logfile created on 2015-09-17 17:15:06 +0530 by logger.rb/47272
+D, [2015-09-17T17:15:06.222888 #31497] DEBUG -- : Numerator :10,denominator2
+D, [2015-09-17T17:15:06.223020 #31497] DEBUG -- : Numerator :10,denominator0
+E, [2015-09-17T17:15:06.223075 #31497] ERROR -- : Error in division: divided by 0
